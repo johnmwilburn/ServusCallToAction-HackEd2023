@@ -22,7 +22,7 @@ function App() {
             <div className="container invitationContainer">
                 <h2 className="heading invitationHeading">Don't know where to start your journey to financial fitenss?</h2><br></br>
 
-                <p className="invitationText">We're Servus,a national community of bankers, and we'd like to help</p><br></br>
+                <p className="invitationText">We're Servus, a national community of bankers, and we'd like to help</p><br></br>
 
                 <button className="button invitationButton" onClick={ () => setAppStage( 'schedule' ) }>Schedule an appointment with one of our finance experts today</button>
             </div>
