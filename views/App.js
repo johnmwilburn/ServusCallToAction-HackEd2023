@@ -5,16 +5,42 @@ import Schedule from './schedule'
 import ExtraInfo from './extra_info'
 import ThankYou from './thank_you'
 
+const TOPICS = {
+    0: 'none',
+    1: 'budget',
+    2: 'tax',
+    3: 'debt'
+}
+
 function App() {
-  const [ appStage, setAppStage ] = useState( 'invitation' )
+    const [ appStage, setAppStage ] = useState( 'invitation' )
+    const [ firstName, setFirstName ] = useState( '' )
+    const [ lastName, setLastName ] = useState( '' )
+    const [ email, setEmail ] = useState( '' )
+    const [ topic, setTopic ] = useState( TOPICS[0] )
+    const [ extraInfo, setExtraInfo ] = useState( '' )
 
     const onFormSubmit = e => {
-        e.preventDefault()
-        setAppStage( 'extra_info' )
+      e.preventDefault()
+
+      setAppStage( 'extra_info' )
+      setFirstName( e.target[0].value )
+      setLastName( e.target[1].value )
+      setEmail( e.target[2].value )
+
+      if ( e.target[3].checked )
+        setTopic( TOPICS[1] )
+
+      else if ( e.target[4].checked )
+        setTopic( TOPICS[2] )
+
+      else if ( e.target[5].checked )
+        setTopic( TOPCIS[3] )
     }
 
     const onEnd = e => {
         e.preventDefault()
+        setExtraInfo( e.target[0].value )
         setAppStage( 'thank_you' )
     }
 
