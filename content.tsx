@@ -1,7 +1,7 @@
 import type { PlasmoContentScript, PlasmoGetStyle, PlasmoGetInlineAnchor } from "plasmo";
-import App from './servus_extension_widget/App';
+import App from './views/App';
 
-import styleText from "data-text:./servus_extension_widget/App.css";
+import styleText from "data-text:./views/App.css";
 
 export const config: PlasmoContentScript = {
     matches: ["https://www.servus.ca/blog/*", "http://www.servus.ca/blog/*"],

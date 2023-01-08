@@ -1,0 +1,82 @@
+* {
+  text-align: center;
+  font-family: effra, sans-serif;
+  font-style: normal;
+  color: #5A5A5A;
+}
+
+input, textarea {
+  text-align: left;
+}
+
+.container {
+  background-color: #d9e9f3;
+  border: 1.5px solid #0072BC;
+  border-radius: 15px;
+  padding: 2em;
+  width: -webkit-fill-available;
+}
+
+
+.heading {
+  color: #0072BC;
+  font-weight: 900;
+  font-weight: 28px;
+}
+
+.invitationHeading, .invitationText, .invitationButton {
+  display: inline-block;
+}
+
+.invitationHeading {
+  margin: 0;
+}
+
+.invitationText {
+  margin: 1em;
+}
+
+.button {
+  background-color: #0072BC;
+  color: white;
+  padding: 5px;
+  border: 0;
+  font-size: 1.2em;
+  border-radius: 5px;
+  box-shadow: 2px 3px rgb(15, 15, 85);
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #037dce;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+}
+
+.basicInputs, .formRadioOptions {
+  text-align: left;
+}
+
+.textInput {
+  width: 95%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.formRadioOptions {
+  padding-left: 20px;
+}
+
+#extraInfo {
+  width: 450px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.scheduleButton {
+  margin-top: 20px;
+}
