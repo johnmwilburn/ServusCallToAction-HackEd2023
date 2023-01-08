@@ -1,13 +1,18 @@
 import { useState } from 'react'
-import './App.css';
 
 import Schedule from './schedule'
+import ExtraInfo from './extra_info'
 import ThankYou from './thank_you'
 
 function App() {
   const [ appStage, setAppStage ] = useState( 'invitation' )
 
     const onFormSubmit = e => {
+        e.preventDefault()
+        setAppStage( 'extra_info' )
+    }
+
+    const onEnd = e => {
         e.preventDefault()
         setAppStage( 'thank_you' )
     }
@@ -27,6 +32,12 @@ function App() {
     else if ( appStage === 'schedule' ) {
         return (
             <Schedule onFormSubmit={ onFormSubmit }/>
+        )
+    }
+
+    else if ( appStage === 'extra_info' ) {
+        return (
+            <ExtraInfo onEnd={ onEnd }/>
         )
     }
 

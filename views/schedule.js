@@ -31,9 +31,6 @@ const Schedule = ({ onFormSubmit }) => {
                     </div>
                 </div>
 
-                <label className="extraInfoPrompt" htmlFor="extraInfo"><strong>Any additional info you want to share?</strong></label><br />
-                <textarea id="extraInfo" name="extraInfo" /><br />
-
                 <button className="button scheduleButton" type="submit">Submit</button>
 
             </form>

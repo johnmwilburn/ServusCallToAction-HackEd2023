@@ -1,7 +1,6 @@
 import type { PlasmoContentScript, PlasmoGetStyle, PlasmoGetInlineAnchor } from "plasmo";
 import App from './views/App';
-
-import styleText from "data-text:./views/App.css";
+import AppStyle from "data-text:./views/App.scss";
 
 export const config: PlasmoContentScript = {
     matches: ["https://www.servus.ca/blog/*", "http://www.servus.ca/blog/*"],
@@ -33,7 +32,7 @@ export const getInlineAnchor: PlasmoGetInlineAnchor = async () => {
 
 export const getStyle: PlasmoGetStyle = () => {
     const style = document.createElement("style");
-    style.textContent = styleText;
+    style.textContent = AppStyle;
     return style;
 };
 

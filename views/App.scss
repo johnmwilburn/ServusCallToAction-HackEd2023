@@ -1,3 +1,7 @@
+#plasmo-shadow-container {
+  z-index: unset !important;
+}
+
 * {
   text-align: center;
   font-family: effra, sans-serif;
@@ -17,23 +21,23 @@ input, textarea {
   width: -webkit-fill-available;
 }
 
-
 .heading {
   color: #0072BC;
   font-weight: 900;
   font-weight: 28px;
 }
 
-.invitationHeading, .invitationText, .invitationButton {
-  display: inline-block;
-}
-
-.invitationHeading {
-  margin: 0;
-}
-
-.invitationText {
-  margin: 1em;
+.invitationContainer {
+  
+  .invitationHeading {
+    margin: 0;
+    display:block;
+  }
+  
+  .invitationText {
+    margin: 1em;
+    display:block;
+  }
 }
 
 .button {
