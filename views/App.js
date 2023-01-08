@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import axios from 'axios'
 
 import HumanFaces from './human_faces'
 import Schedule from './schedule'
@@ -38,10 +39,44 @@ function App() {
         setTopic( TOPCIS[3] )
     }
 
-    const onEnd = e => {
+    const onEnd = async e => {
         e.preventDefault()
-        setExtraInfo( e.target[0].value )
+
         setAppStage( 'thank_you' )
+        setExtraInfo( e.target[0].value )
+
+        const data = {
+            firstName,
+            lastName,
+            email,
+            topic,
+            extraInfo
+        }
+
+           axios
+             .post('http://servus-email-server.fly.dev/', data)
+             .then(response => {
+                console.log("BANANANAANANANANANANA batmannnnnnnnnnnnnnnn but good this time?");
+             })
+             .catch(e => {
+                console.log("BANANANAANANANANANANA batmannnnnnnnnnnnnnnn but bad this time?")
+             })
+
+        // fetch('https://servus-email-server.fly.dev/', {
+        //     method: 'POST',
+        //     body: JSON.stringify({
+        //        userId: Math.random().toString(36).slice(2),
+        //     }),
+        //     headers: {
+        //        'Content-type': 'application/json; charset=UTF-8',
+        //     },
+        //  })
+        //     .then((res) =>{
+        //         console.log(res);
+        //         console.log("hooray");
+        //     }).catch(e => {
+        //         console.log("nooooo");
+        //     })
     }
 
     if ( appStage === 'invitation' ) {
