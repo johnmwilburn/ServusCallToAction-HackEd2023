@@ -13,12 +13,22 @@ input, textarea {
   text-align: left;
 }
 
+.horizontal-divider{
+  border-top: 0.25px solid rgba(0, 114, 188, 0.175);
+  width: -webkit-fill-available;
+  margin: 1em 0 1em 0;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(0, 114, 188, 0.175);
+}
+
 .container {
   background-color: #d9e9f3;
   border: 1.5px solid #0072BC;
   border-radius: 15px;
   padding: 2em;
-  width: -webkit-fill-available;
+  min-width: -webkit-fill-available;
+  max-width: -webkit-fill-available;
 }
 
 .heading {
@@ -35,8 +45,12 @@ input, textarea {
   }
   
   .invitationText {
-    margin: 1em;
+    margin: 0em;
     display:block;
+  }
+
+  .invitationButton {
+    margin-top: 1em;
   }
 }
 
@@ -53,6 +67,31 @@ input, textarea {
 .button:hover {
   cursor: pointer;
   background-color: #037dce;
+}
+
+.humanFacesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.humanFaceColumn {
+  margin: 0 10px;
+  img {
+    border-radius: 200px;
+  }
+  p {
+    margin: 0;
+  }
+
+  .humanFaceName { 
+    font-size: 0.825em;
+  }
+  .humanFaceJob {
+    font-size: 0.7em;
+    font-weight: 300;
+  }
+
 }
 
 .formGrid {
